@@ -11,7 +11,11 @@ bash <(curl -s -L https://raw.githubusercontent.com/smpsoft/minerP/master/instal
 自带守护，开启最大连接数
 安装后输入supervisorctl restart all 回车生效！
 
-
+linux如果不开机自启.服务器重启后，转发软件不会自动运行
+需要进入目录.在后台运行下.命令如下
+===========
+>     cd minerP
+>     nohup ./minerProxy_3.0.3_linux &
 
 
 windows服务器
