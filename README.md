@@ -1,6 +1,6 @@
 高性能以太坊矿池代理中转, SSL/TCP转发加密
 安装好之后记得改掉默认的访问端口；文件名是config.yml；用记事本打开更换！linux要改etc目录下
-MinerProxy-Eth里的config；
+minerproxy里的config；
 linux改好端口之后输入supervisorctl restart all 后生效！
 安装完成后，请立即修改默认密码，以防别有用心之人，扫描端口偷偷登录！！！ 
 
