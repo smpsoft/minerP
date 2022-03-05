@@ -1,6 +1,6 @@
 高性能以太坊矿池代理中转, SSL/TCP转发加密
 安装好之后记得改掉默认的访问端口；文件名是config.yml；用记事本打开更换！linux要改etc目录下
-minerproxy里的config；
+minerp里的config；
 linux改好端口之后输入supervisorctl restart all 后生效！
 安装完成后，请立即修改默认密码，以防别有用心之人，扫描端口偷偷登录！！！ 
 
@@ -38,7 +38,7 @@ windows服务器
 # Liunx-手动安装
 ```bash
 git clone https://github.com/smpsoft/minerP.git 
-cd minerproxy
+cd minerp
 chmod a+x minerProxy_3.0.3_linux 
 nohup ./minerProxy_3.0.3_linux & (后台运行，注意：& 也需要复制，运行完再敲几下回车)
 tail -f nohup.out (后台运行时查看)
