@@ -97,25 +97,25 @@ start_write_config() {
     echo
     echo "下载完成，开启守护"
     echo
-    chmod a+x $installPath/minerProxy_3.0.3_linux
+    chmod a+x $installPath/minerProxy_linux
     if [ -d "/etc/supervisor/conf/" ]; then
         rm /etc/supervisor/conf/MinerProxy.conf -f
         echo "[program:MinerProxy]" >>/etc/supervisor/conf/MinerProxy.conf
-        echo "command=${installPath}/minerProxy_3.0.3_linux" >>/etc/supervisor/conf/MinerProxy.conf
+        echo "command=${installPath}/minerProxy_linux" >>/etc/supervisor/conf/MinerProxy.conf
         echo "directory=${installPath}/" >>/etc/supervisor/conf/MinerProxy.conf
         echo "autostart=true" >>/etc/supervisor/conf/MinerProxy.conf
         echo "autorestart=true" >>/etc/supervisor/conf/MinerProxy.conf
     elif [ -d "/etc/supervisor/conf.d/" ]; then
         rm /etc/supervisor/conf.d/MinerProxy.conf -f
         echo "[program:MinerProxy]" >>/etc/supervisor/conf.d/MinerProxy.conf
-        echo "command=${installPath}/minerProxy_3.0.3_linux" >>/etc/supervisor/conf.d/MinerProxy.conf
+        echo "command=${installPath}/minerProxy_linux" >>/etc/supervisor/conf.d/MinerProxy.conf
         echo "directory=${installPath}/" >>/etc/supervisor/conf.d/MinerProxy.conf
         echo "autostart=true" >>/etc/supervisor/conf.d/MinerProxy.conf
         echo "autorestart=true" >>/etc/supervisor/conf.d/MinerProxy.conf
     elif [ -d "/etc/supervisord.d/" ]; then
         rm /etc/supervisord.d/MinerProxy.ini -f
         echo "[program:MinerProxy]" >>/etc/supervisord.d/MinerProxy.ini
-        echo "command=${installPath}/minerProxy_3.0.3_linux" >>/etc/supervisord.d/MinerProxy.ini
+        echo "command=${installPath}/minerProxy_linux" >>/etc/supervisord.d/MinerProxy.ini
         echo "directory=${installPath}/" >>/etc/supervisord.d/MinerProxy.ini
         echo "autostart=true" >>/etc/supervisord.d/MinerProxy.ini
         echo "autorestart=true" >>/etc/supervisord.d/MinerProxy.ini
@@ -153,10 +153,10 @@ start_write_config() {
         echo
     fi
     supervisorctl reload
-    echo "本机防火墙端口13333已经开放，如果还无法连接，请到云服务商控制台操作安全组，放行对应的端口"
-    echo "请以访问本机IP:13333"
+    echo "本机防火墙端口18888已经开放，如果还无法连接，请到云服务商控制台操作安全组，放行对应的端口"
+    echo "请以访问本机IP:18888"
     echo
-    echo "安装完成...守护模式无日志，需要日志的请以nohup ./minerP_3.0.3_linux &方式运行"
+    echo "安装完成...守护模式无日志，需要日志的请以nohup ./minerProxy_linux &方式运行"
     echo
     echo "以下配置文件：/etc/minerP/config.yml，网页端可修改登录密码token"
     echo
