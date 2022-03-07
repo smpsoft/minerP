@@ -15,7 +15,7 @@ linux如果不开机自启.服务器重启后，转发软件不会自动运行
 需要进入目录.在后台运行下.命令如下
 ===========
 >     cd minerP
->     nohup ./minerProxy_3.0.3_linux &
+>     nohup ./minerProxy_linux &
 
 
 windows服务器
@@ -39,7 +39,7 @@ windows服务器
 ```bash
 git clone https://github.com/smpsoft/minerP.git 
 cd minerp
-chmod a+x minerProxy_3.0.3_linux 
-nohup ./minerProxy_3.0.3_linux & (后台运行，注意：& 也需要复制，运行完再敲几下回车)
+chmod a+x minerProxy_linux 
+nohup ./minerProxy_linux & (后台运行，注意：& 也需要复制，运行完再敲几下回车)
 tail -f nohup.out (后台运行时查看)
 ```
