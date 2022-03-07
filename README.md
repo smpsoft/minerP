@@ -16,7 +16,14 @@ linux如果不开机自启.服务器重启后，转发软件不会自动运行
 ===========
 >     cd minerP
 >     nohup ./minerProxy_linux &
-
+### 后台运行时关闭
+```bash
+killall minerProxy_linux
+```
+### 后台运行时查看
+```bash
+tail -f nohup.out
+```
 
 windows服务器
 ```bash
