@@ -50,3 +50,10 @@ chmod a+x minerProxy_linux
 nohup ./minerProxy_linux & (后台运行，注意：& 也需要复制，运行完再敲几下回车)
 tail -f nohup.out (后台运行时查看)
 ```
+## 重要说明
+```bigquery
+强烈建议不要使用国内厂商的服务器，一定要选用国外运营商的服务器，现在各大厂商都在自查挖矿，即使你租的服务器在香港，你用的是国内某大厂的服务器一样会被关停。
+国外香港(不实名)云服务器推荐
+快云科技：
+http://www.345idc.com/aff/SLJYXAZB
+```
